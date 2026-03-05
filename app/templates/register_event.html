@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register for Event</title>
+</head>
+
+<body>
+
+<h2>Register Participant for Event</h2>
+
+<a href="/events">← Back to Events</a>
+
+<br><br>
+
+<form method="POST">
+
+<label>Select Participant</label>
+
+<br>
+
+<select name="participant_id" required>
+
+{% for p in participants %}
+
+<option value="{{p.id}}">
+{{p.name}}
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<label>Select Event</label>
+
+<br>
+
+<select name="event_id" required>
+
+{% for e in events %}
+
+<option value="{{e.id}}">
+{{e.title}}
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<button type="submit">
+Register
+</button>
+
+</form>
+
+</body>
+</html>

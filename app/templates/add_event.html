@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Create Event</h2>
+
+<form method="POST">
+
+<label>Event Title</label>
+<input type="text" name="title" required>
+
+<br><br>
+
+<label>Capacity</label>
+<input type="number" name="capacity">
+
+<br><br>
+
+<label>Trainer</label>
+
+<select name="trainer_id">
+
+{% for t in trainers %}
+
+<option value="{{t.id}}">
+{{t.name}}
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br>
+
+<button type="submit">
+Create Event
+</button>
+
+</form>
+</body>
+</html>

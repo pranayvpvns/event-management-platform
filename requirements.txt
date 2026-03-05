@@ -1,0 +1,13 @@
+flask
+sqlalchemy
+pymysql
+psycopg2-binary
+pymongo
+python-dotenv
+pytest
+requests
+flask-sqlalchemy
+pymongo
+pytest
+pytest-flask
+pytest-cov

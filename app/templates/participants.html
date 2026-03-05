@@ -1,0 +1,29 @@
+<h2>Participants</h2>
+
+<a href="/participants/add">Add Participant</a>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Action</th>
+</tr>
+
+{% for p in participants %}
+
+<tr>
+<td>{{p.id}}</td>
+<td>{{p.name}}</td>
+<td>{{p.email}}</td>
+<td>{{p.phone}}</td>
+<td>
+<a href="/participants/delete/{{p.id}}">Delete</a>
+</td>
+</tr>
+
+{% endfor %}
+
+</table>

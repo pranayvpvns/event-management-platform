@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Trainers</h2>
+
+<a href="/trainers/add">Add Trainer</a>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Expertise</th>
+<th>Action</th>
+</tr>
+
+{% for t in trainers %}
+
+<tr>
+<td>{{t.id}}</td>
+<td>{{t.name}}</td>
+<td>{{t.expertise}}</td>
+<td><a href="/trainers/delete/{{t.id}}">Delete</a></td>
+</tr>
+
+{% endfor %}
+
+</table>
+</body>
+</html>
