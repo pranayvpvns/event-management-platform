@@ -4,32 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Trainers</h2>
+<body class="bg-light p-4">
 
-<a href="/trainers/add">Add Trainer</a>
+    <div class="container bg-white p-4 shadow-sm rounded border">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="m-0 text-primary">Trainers</h2>
+            <a href="/trainers/add" class="btn btn-dark">
+                + Add Trainer
+            </a>
+        </div>
 
-<table border="1">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                
+                <thead class="table-secondary">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Expertise</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
 
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Expertise</th>
-<th>Action</th>
-</tr>
+                <tbody>
+                    {% for t in trainers %}
+                    <tr>
+                        <td><span class="text-muted small">#{{t.id}}</span></td>
+                        <td class="fw-semibold">{{t.name}}</td>
+                        <td>
+                            <span class="badge rounded-pill bg-info text-dark">
+                                {{t.expertise}}
+                            </span>
+                        </td>
+                        <td class="text-center">
+                            <a href="/trainers/delete/{{t.id}}" class="btn btn-sm btn-outline-danger">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
 
-{% for t in trainers %}
+            </table>
+        </div>
 
-<tr>
-<td>{{t.id}}</td>
-<td>{{t.name}}</td>
-<td>{{t.expertise}}</td>
-<td><a href="/trainers/delete/{{t.id}}">Delete</a></td>
-</tr>
+    </div>
 
-{% endfor %}
-
-</table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

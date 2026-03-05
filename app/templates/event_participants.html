@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Registered Participants</h2>
+<body class="bg-light p-4">
 
-<table border="1">
+    <div class="container bg-white p-4 shadow-sm rounded border">
+        
+        <h2 class="mb-4">Registered Participants</h2>
 
-<tr>
-<th>Participant Name</th>
-<th>Email</th>
-</tr>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+                
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Participant Name</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
 
-{% for r in registrations %}
+                <tbody>
+                    {% for r in registrations %}
+                    <tr>
+                        <td>{{r.participant.name}}</td>
+                        <td>{{r.participant.email}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
 
-<tr>
-<td>{{r.participant.name}}</td>
-<td>{{r.participant.email}}</td>
-</tr>
+            </table>
+        </div>
 
-{% endfor %}
+    </div>
 
-</table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

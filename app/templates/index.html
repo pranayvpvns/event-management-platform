@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Event Management Platform</h2>
-    <a href="./participants">View Participants</a>
-    <a href="./trainers">View the trainers</a>
-    <a href="./events">View Events</a>
+<body class="bg-light">
+
+    <div class="container mt-5 text-center">
+        
+        <div class="py-5">
+            <h1 class="display-4 mb-4">Event Management Platform</h1>
+            <p class="lead text-muted mb-5">Quickly manage your participants, trainers, and upcoming events.</p>
+        </div>
+
+        <div class="row justify-content-center gap-3">
+            
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Participants</h5>
+                        <a href="./participants" class="btn btn-outline-primary w-100 mt-3">View Participants</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Trainers</h5>
+                        <a href="./trainers" class="btn btn-outline-success w-100 mt-3">View the trainers</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Events</h5>
+                        <a href="./events" class="btn btn-outline-dark w-100 mt-3">View Events</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
